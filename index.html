@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <title>Simple crud operation</title>
+</head>
+<body>
+<div class="container">
+    <div class="modal">
+        <h1>CRUD</h1>
+            <form>            
+                <label for="user-name">
+                    Nome
+                    <input type="text" name="username" id="user-name" placeholder="Ex: Gabriel Jodas">
+                </label>
+                           
+                <input type="tel" name="telefone" id="user-phone" placeholder="Ex: 11 98765-4321">
+                    <button id="submitBtn" type="submit">Cadastrar</button>
+            </form>
+
+        <div class="users-datas">
+            <input type="text" id="search-name" name="search-name" placeholder="Buscar">
+        </div>    
+    </div>
+
+        <div class="overlay">
+            <div class="edit-overlay">
+                    <input type="text" id="new-name" name="new-name" placeholder="Digite o novo nome">
+                    <input type="tel" id="new-phone" name="new-phone" placeholder="Digite o novo número">
+
+                    <div class="overlay-buttons">
+                        <button type="submit" id="save-edit">Salvar</button>
+                        <button type="submit" id="cancel-edit">Cancelar</button>
+                    </div>
+            </form>
+        </div>
+</div>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

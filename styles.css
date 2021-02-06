@@ -1,0 +1,205 @@
+/* -- FIELD TO FORM REGISTER */
+/* -- USER REGISTERED DATA */
+/* -- MODAL OVERLAY */
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-red: #b60808;
+    --color-blue: #37848C;
+    --hover-blue: #2e6a70;
+    --border-gray: rgb(173, 173, 173);
+    --body-color: #f5f4f4;
+    --border-shadow: rgb(27, 27, 27);
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--body-color);
+}
+
+/* FIELD TO FORM REGISTER */
+.container {
+    min-width: 100vw;
+    min-height: 90vh;
+}
+
+.modal {
+    position: relative;
+    width: 50%;
+    height: 80%;
+    margin: 0 auto;
+
+    background: white;
+    box-shadow: 0 0 1rem var(--border-shadow);
+}
+
+h1 {
+    padding-top: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    letter-spacing: 2px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+
+    border-bottom: 1px solid var(--border-gray);
+}
+
+label {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+input {
+    width: 250px;
+    font-size: 1rem;
+    padding: 4px;
+    margin-top: 1rem;
+
+    display: flex;
+    border: 2px solid rgb(20, 20, 20);
+}
+
+input:hover {
+    background: var(--body-color);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: .25rem;
+    border: none;
+
+    width: 250px;
+    margin: 1rem 0 1rem 0;
+    height: 1.5rem;
+
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1rem;
+
+    background: var(--color-blue);
+    color: white;
+}
+button:hover {
+    background: var(--hover-blue);
+}
+
+
+/* USER REGISTERED DATA */
+.users-datas {
+    /* display: flex;
+    flex-direction: column; */
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+#search-name {
+    grid-column: span 4;
+    margin: 0 auto;
+}
+
+li {
+    width: 200px;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--border-gray);
+    list-style: none;
+}
+
+li p {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 18px;
+    z-index: 2;
+}
+li small {
+    display: block;
+    padding: 5px 0 1rem 1rem;
+}
+
+li a {
+    color: var(--color-blue);
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    padding: 1rem;
+    opacity: .8;
+}
+
+li a:last-child {
+    color: var(--color-red);
+}
+
+li a:hover {
+    opacity: 1;
+}
+
+/* MODAL OVERLAY */
+.overlay {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    background: rgba(0, 0 , 0, .6);
+    visibility: hidden;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.edit-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    width: auto;
+    height: 300px;
+}
+
+.edit-overlay input {
+    border: 1px solid black;
+}
+
+.overlay-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 50%;
+    gap: 2rem;
+}
+
+#cancel-edit {
+    background: var(--color-red);
+    opacity: .9;
+}
+
+#cancel-edit:hover {
+    opacity: 1;
+}
